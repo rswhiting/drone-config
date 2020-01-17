@@ -1,0 +1,214 @@
+# DIFF all
+# version
+# Betaflight / MATEKF411 (MK41) 4.0.2 May  5 2019 / 12:03:05 (56bdc8d26) MSP API: 1.41
+# start the command batch
+batch start
+# reset configuration to default settings
+defaults nosave
+board_name MATEKF411
+manufacturer_id 
+mcu_id 0051004a3437510335313736
+signature 
+# name
+name Whiting
+# resources
+# timer
+# dma
+# mixer
+# servo
+# servo mix
+# feature
+feature -SOFTSERIAL
+feature -TELEMETRY
+feature -AIRMODE
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -RX_SET
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+# beacon
+beacon RX_SET
+# map
+# serial
+serial 1 2048 115200 57600 0 115200
+# led
+# color
+# mode_color
+# aux
+aux 0 0 0 1775 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 28 1 900 1550 0 0
+aux 4 30 1 900 2100 0 0
+aux 5 35 2 1700 2100 0 0
+# adjrange
+adjrange 0 1 1 1450 1550 12 1 0 0
+# vtx
+# rxfail
+# display_name
+# master
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 70
+set dyn_notch_min_hz = 130
+set dyn_lpf_gyro_min_hz = 300
+set acc_calibration = -57,7,-84
+# set baro_hardware = NONE
+set min_check = 1007
+set max_check = 2000
+set rssi_channel = 9
+set fpv_mix_degrees = 12
+set airmode_start_throttle_percent = 15
+set dshot_idle_value = 600
+set motor_pwm_protocol = DSHOT600
+set bat_capacity = 450
+set vbat_min_cell_voltage = 290
+set vbat_warning_cell_voltage = 300
+set crashflip_motor_percent = 75
+set small_angle = 180
+set pid_process_denom = 1
+set runaway_takeoff_prevention = OFF
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 2403
+set osd_rssi_pos = 34
+set osd_tim_2_pos = 53
+set osd_flymode_pos = 2422
+set osd_vtx_channel_pos = 355
+set osd_craft_name_pos = 2410
+set vtx_band = 1
+set vtx_channel = 7
+set vtx_freq = 5745
+set vcd_video_system = NTSC
+set displayport_max7456_wht = 3
+# profile
+profile 0
+set dterm_lowpass_hz = 80
+set dterm_lowpass2_hz = 170
+set vbat_pid_gain = ON
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 100
+set throttle_boost = 8
+set p_pitch = 50
+set i_pitch = 120
+set d_pitch = 25
+set f_pitch = 120
+set p_roll = 50
+set i_roll = 120
+set d_roll = 30
+set f_roll = 120
+set p_yaw = 95
+set i_yaw = 90
+set f_yaw = 100
+set level_limit = 70
+set horizon_tilt_effect = 80
+set horizon_tilt_expert_mode = ON
+# profile
+profile 1
+set dyn_lpf_dterm_min_hz = 200
+set dterm_lowpass_hz = 80
+set dterm_lowpass2_type = BIQUAD
+set dterm_lowpass2_hz = 0
+set vbat_pid_gain = ON
+set feedforward_transition = 25
+set throttle_boost = 4
+set p_pitch = 95
+set i_pitch = 25
+set d_pitch = 70
+set f_pitch = 90
+set p_roll = 95
+set i_roll = 25
+set d_roll = 70
+set f_roll = 90
+set p_yaw = 95
+set i_yaw = 0
+set d_yaw = 68
+set f_yaw = 90
+set angle_level_strength = 110
+set horizon_level_strength = 30
+set horizon_transition = 80
+set level_limit = 70
+set horizon_tilt_effect = 80
+set horizon_tilt_expert_mode = ON
+set abs_control_gain = 20
+set use_integrated_yaw = ON
+set d_min_roll = 0
+set d_min_pitch = 0
+set d_min_boost_gain = 20
+set d_min_advance = 0
+# profile
+profile 2
+set dterm_lowpass_hz = 80
+set dterm_lowpass2_hz = 170
+set feedforward_transition = 25
+set iterm_relax = RPY
+set yaw_lowpass_hz = 100
+set throttle_boost = 4
+set p_pitch = 100
+set i_pitch = 120
+set d_pitch = 90
+set f_pitch = 90
+set p_roll = 100
+set i_roll = 120
+set d_roll = 90
+set f_roll = 90
+set p_yaw = 90
+set i_yaw = 90
+set d_yaw = 40
+set f_yaw = 80
+set level_limit = 25
+set abs_control_gain = 5
+# restore original profile selection
+profile 1
+# rateprofile
+rateprofile 0
+set yaw_rc_rate = 210
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 20
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 25
+# rateprofile
+rateprofile 1
+set yaw_rc_rate = 210
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 25
+set tpa_rate = 75
+set tpa_breakpoint = 1750
+# rateprofile
+rateprofile 2
+set yaw_rc_rate = 215
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 10
+set tpa_rate = 80
+set tpa_breakpoint = 1800
+# rateprofile
+rateprofile 3
+# rateprofile
+rateprofile 4
+# rateprofile
+rateprofile 5
+# restore original rateprofile selection
+rateprofile 2
+# save configuration
+save
